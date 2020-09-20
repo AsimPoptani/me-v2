@@ -3,6 +3,7 @@ import { ArrowBackRounded, ArrowForwardRounded } from '@material-ui/icons'
 import './Carousel.css'
 import { Card, CardContent } from '@material-ui/core'
 import * as R from 'ramda'
+
 export default function carousel(props) {
     // get a list of cards
     // A card has the following propeties:
@@ -14,7 +15,17 @@ export default function carousel(props) {
 
     cards.forEach((card) => {
         console.warn(card)
-        content.push(<Card><CardContent><p className="cardTitle">{R.prop('title', card)}</p><img id="icon" src={R.path(['image', 'src'], card)} alt={R.path(['image', 'alt'], card)} /><p>{R.prop('summary', card)}</p></CardContent></Card>)
+        content.push(
+            <Card>
+                <CardContent>
+                    {/* <p className="cardTitle">{R.prop('title', card)}</p> */}
+                    <div id="card_content">
+                    <img id="icon" src={R.path(['image', 'src'], card)} alt={R.path(['image', 'alt'], card)} />
+                    <p>{R.prop('summary', card)}</p>
+                    </div>
+                </CardContent>
+            </Card>
+        )
     })
 
     return (
@@ -28,13 +39,6 @@ export default function carousel(props) {
                     {/* This is space for the cards */}
                     <div id="content">
                         {content}
-                        {/* <Card><CardContent></CardContent></Card>
-                        <Card><CardContent></CardContent></Card>
-                        <Card><CardContent></CardContent></Card>
-                        <Card><CardContent></CardContent></Card>
-                        <Card><CardContent></CardContent></Card>
-                        <Card><CardContent></CardContent></Card>
-                        <Card><CardContent></CardContent></Card> */}
                     </div>
                     {/* This is the space for the arrow right */}
                     <div className="arrow">

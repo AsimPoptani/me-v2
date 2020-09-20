@@ -16,6 +16,9 @@ function App() {
     {
       title: "Java",
       summary: "Love Java",
+      image: {
+        src: require('./imgs/java.png')
+      }
     },
   ]
   return (
@@ -32,12 +35,7 @@ function App() {
       <div className="section light">
         <p>Main Skills</p>
         <Carosel cards={skills}/>
-        {/* <Card>
-          <CardContent>
-            <AccessAlarm/>
-            Hello
-          </CardContent>
-          </Card> */}
+
         <p>Java</p>
         <p>NodeJs</p>
       </div>
