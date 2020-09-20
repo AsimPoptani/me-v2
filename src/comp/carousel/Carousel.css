@@ -1,0 +1,34 @@
+.arrow {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+#content {
+    display: flex;
+    flex-direction: row;
+    overflow-x: hidden;
+    padding: 10px;
+    flex: 9
+}
+
+#content>* {
+    min-width: 25vw;
+    margin: 0 2vw 0 2vw;
+    box-shadow: 4px 4px 16px black;
+}
+
+#carousel {
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+    min-height: 18vw;
+    max-height: 20vw;
+}
+
+.cardTitle {
+    font-style: italic;
+    font-weight: bold;
+    text-align: center;
+}
