@@ -15,10 +15,11 @@
 }
 
 #content>* {
-    min-width: 25vw;
+    width: 25vw;
     margin: 0 2vw 0 2vw;
     box-shadow: 4px 4px 16px black;
     flex-wrap: nowrap;
+    width: 25vw;
 }
 
 #icon {
